@@ -1,10 +1,12 @@
+import avatar from "../assets/images/avatar.jpeg";
+
 const members = [
     {
         _id: "67rdca3eeb7f6fgeed471818",
         firstName: "Pavel",
         lastName: "Koryakin",
         dateOfBirth: "1966-01-08",
-        photo: "/",
+        photo: avatar,
         about: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum id totam rem facere nam, voluptate excepturi eaque perferendis vel necessitatibus.",
         technologies: {
             html: { name: "HTML", lavel: "80" },
@@ -23,8 +25,11 @@ const members = [
             telegram: "https://t.me/pavel_koryakin",
             instagram: "https://www.instagram.com/"
         },
-        role: "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-        badge: { name: "Quick Eye", color: "danger" },
+        role: {
+            text: "Here's what I did on the project",
+            componets: ["Favourites"]
+        },
+        badge: { name: "quick eye", color: "danger" },
         bookmark: false
     },
     {
@@ -32,7 +37,7 @@ const members = [
         firstName: "Valeriy",
         lastName: "Harlamov",
         dateOfBirth: "1966-11-05",
-        photo: "/",
+        photo: avatar,
         about: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum id totam rem facere nam, voluptate excepturi eaque perferendis vel necessitatibus.",
         technologies: {
             html: { name: "HTML", lavel: "80" },
@@ -51,8 +56,11 @@ const members = [
             telegram: "https://t.me/Valera5454",
             instagram: "https://www.instagram.com/"
         },
-        role: "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-        badge: { name: "Quick Eye", color: "danger" },
+        role: {
+            text: "Here's what I did on the project",
+            componets: ["Navbar"]
+        },
+        badge: { name: "sad sorcerer", color: "secondary" },
         bookmark: false
     },
     {
@@ -60,7 +68,7 @@ const members = [
         firstName: "Liudmyla",
         lastName: "Duvivier",
         dateOfBirth: "1974-07-19",
-        photo: "/",
+        photo: avatar,
         about: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum id totam rem facere nam, voluptate excepturi eaque perferendis vel necessitatibus.",
         technologies: {
             html: { name: "HTML", lavel: "80" },
@@ -79,8 +87,11 @@ const members = [
             telegram: "https://t.me/ludmyladev",
             instagram: "https://www.instagram.com/"
         },
-        role: "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-        badge: { name: "Quick Eye", color: "danger" },
+        role: {
+            text: "Here's what I did on the project",
+            componets: ["Badge", "Button"]
+        },
+        badge: { name: "quick eye", color: "danger" },
         bookmark: false
     },
     {
@@ -88,7 +99,7 @@ const members = [
         firstName: "Dmitry",
         lastName: "Lavrov",
         dateOfBirth: "1965-11-23",
-        photo: "/",
+        photo: avatar,
         about: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum id totam rem facere nam, voluptate excepturi eaque perferendis vel necessitatibus.",
         technologies: {
             html: { name: "HTML", lavel: "80" },
@@ -107,8 +118,11 @@ const members = [
             telegram: "https://t.me/Dmi_Lavrov",
             instagram: "https://www.instagram.com/"
         },
-        role: "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-        badge: { name: "Quick Eye", color: "danger" },
+        role: {
+            text: "Here's what I did on the project",
+            componets: ["Progress", "About Page"]
+        },
+        badge: { name: "agile badger", color: "success" },
         bookmark: false
     },
     {
@@ -116,7 +130,7 @@ const members = [
         firstName: "Andrey",
         lastName: "Rybnikov",
         dateOfBirth: "1966-02-18",
-        photo: "/",
+        photo: avatar,
         about: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum id totam rem facere nam, voluptate excepturi eaque perferendis vel necessitatibus.",
         technologies: {
             html: { name: "HTML", lavel: "80" },
@@ -135,8 +149,11 @@ const members = [
             telegram: "https://t.me/Egolege",
             instagram: "https://www.instagram.com/"
         },
-        role: "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-        badge: { name: "Quick Eye", color: "danger" },
+        role: {
+            text: "Here's what I did on the project",
+            componets: ["Slider", "Footer"]
+        },
+        badge: { name: "egolege", color: "info" },
         bookmark: false
     },
     {
@@ -144,7 +161,7 @@ const members = [
         firstName: "Yuriy",
         lastName: "Vedernikov",
         dateOfBirth: "1978-08-31",
-        photo: "/",
+        photo: avatar,
         about: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum id totam rem facere nam, voluptate excepturi eaque perferendis vel necessitatibus.",
         technologies: {
             html: { name: "HTML", lavel: "80" },
@@ -163,8 +180,11 @@ const members = [
             telegram: "https://t.me/yuriy_yupiter",
             instagram: "https://www.instagram.com/"
         },
-        role: "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-        badge: { name: "Quick Eye", color: "danger" },
+        role: {
+            text: "Here's what I did on the project",
+            componets: ["Members Card", "Breadcrumbs"]
+        },
+        badge: { name: "moderate pedant", color: "primary" },
         bookmark: false
     }
 ];
