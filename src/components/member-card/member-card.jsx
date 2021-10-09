@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 
 const MemberCard = ({ memberId }) => {
     const [member] = useState(members.find((item) => item._id === memberId));
-    console.log("member:", member);
 
     return (
         <>

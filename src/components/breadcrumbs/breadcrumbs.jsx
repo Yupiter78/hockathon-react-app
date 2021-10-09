@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import members from "../../db/api.members";
 
 const Breadcrumbs = () => {
     const location = useLocation();
@@ -11,8 +12,14 @@ const Breadcrumbs = () => {
         { to: "/:memberId", label: "Member" }
     ];
 
+    const membersCrumbs = members.map((member) => {
+        return { to: `/${member._id}`, label: `${member.firstName}` };
+    });
+
+    const allBreadCrumbs = [...breadCrumbsItems, ...membersCrumbs];
+
     const breadCrumbsData = (location) => {
-        if (location !== "/") {
+        if (location !== "/" && location !== "/404") {
             return location.split("/").map((crumb) => "/" + crumb);
         }
         return [];
@@ -28,7 +35,7 @@ const Breadcrumbs = () => {
             });
         });
     };
-    totalLocation(locationArray, breadCrumbsItems);
+    totalLocation(locationArray, allBreadCrumbs);
 
     return (
         <div>
