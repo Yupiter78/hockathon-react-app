@@ -15,7 +15,7 @@ const Breadcrumbs = () => {
         if (location !== "/") {
             return location.split("/").map((crumb) => "/" + crumb);
         }
-        return ["/"];
+        return [];
     };
     const locationArray = breadCrumbsData(location.pathname);
     const resultData = [];

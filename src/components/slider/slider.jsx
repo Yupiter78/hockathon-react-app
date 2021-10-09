@@ -35,9 +35,7 @@ const Slider = () => {
                 className="swiper-parallax-bg"
                 style={{ backgroundImage: `url(${img1})` }}
                 data-swiper-parallax="-10%"
-            >
-                {" "}
-            </div>
+            ></div>
 
             {members.map((member) => (
                 <SwiperSlide

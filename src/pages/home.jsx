@@ -1,13 +1,14 @@
 import React from "react";
 import members from "../db/api.members";
-import Badge from "../components/badge/badge";
+// import Badge from "../components/badge/badge";
 import Button from "../components/button/button";
 import Card from "../components/card/card";
 import MemberCard from "../components/member-card/member-card";
 import Progress from "../components/progress/progress";
 import Slider from "../components/slider/slider";
+import PropTypes from "prop-types";
 
-const Home = () => {
+const Home = ({ onFavorite }) => {
     return (
         <>
             <Slider />
@@ -17,17 +18,19 @@ const Home = () => {
                         <h1 className="fw-light">Our Team</h1>
                     </div>
                 </section>
-
                 <div className="album py-5 bg-light p-3">
                     <div className="container">
                         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                             {members.map((member) => (
-                                <Card key={member._id} {...member} />
+                                <Card
+                                    key={member._id}
+                                    {...member}
+                                    onFavorite={onFavorite}
+                                />
                             ))}
                         </div>
                     </div>
                 </div>
-
                 <section className="py-5 container p-3">
                     <div className="row py-lg-5">
                         <div className="col-lg-10 col-md-10 mx-auto">
@@ -80,12 +83,21 @@ const Home = () => {
                     </div>
                 </section>
             </main>
-            <Badge />
-            <Button />
+            <Button
+                type="secondary"
+                text="Add"
+                size={10}
+                disabled={false}
+                icon={"imgUrl"}
+                shape="round"
+            />
             <MemberCard />
             <Progress />
         </>
     );
+};
+Home.propTypes = {
+    onFavorite: PropTypes.func
 };
 
 export default Home;
