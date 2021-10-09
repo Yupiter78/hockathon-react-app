@@ -1,15 +1,49 @@
 import React, { useState } from "react";
 import members from "../db/api.members";
+import PropTypes from "prop-types";
+// import { useHistory } from "react-router-dom";
 
-const MemberCard = (memberId) => {
-    const [member, setMember] = useState();
-    setMember(members.find((item) => item._id === memberId));
+const MemberCard = ({ memberId }) => {
+    // const history = useHistory();
+    const [member] = useState(members.find((item) => item._id === memberId));
+    console.log("memberId:", memberId);
+    console.log(members);
+    console.log("member:", member);
 
     return (
-        <div>
-            <h1> {member.firstName}</h1>
-        </div>
+        <>
+            {member && (
+                <div className="card-body">
+                    <img src={member.photo} alt="no photo" />
+                    <h1 className="card-title">{`${member.firstName} ${member.lastName}`}</h1>
+                    <h2>{`ege: ${
+                        new Date().getFullYear() -
+                        new Date(member.dateOfBirth).getFullYear()
+                    }`}</h2>
+                    <h2>about:</h2>
+                    <h3>{member.about}</h3>
+                    <h2>hard skills:</h2>
+                    <h3 className="card-text">
+                        {Object.keys(member.technologies).map((item) => {
+                            return `${member.technologies[item].name}: ${member.technologies[item].lavel}, `;
+                        })}
+                    </h3>
+                    <h2>soft skills:</h2>
+                    <h3>
+                        {Object.entries(member.socialLinks).map((item) => {
+                            return `${item[0]}: ${item[1]}, `;
+                        })}
+                    </h3>
+                    <h2>did do in this project:</h2>
+                    <h3>{member.role}</h3>
+                </div>
+            )}
+        </>
     );
+};
+
+MemberCard.propTypes = {
+    memberId: PropTypes.string
 };
 
 export default MemberCard;

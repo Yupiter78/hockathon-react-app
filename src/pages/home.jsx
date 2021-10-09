@@ -14,7 +14,7 @@ const Home = () => {
             <Badge />
             <Breadcrumbs />
             <Button />
-            <MemberCard />
+            <MemberCard memberId="67rdca3eeb7f6fgeed471818" />
             <Navbar />
             <Progress />
             <Slider />
