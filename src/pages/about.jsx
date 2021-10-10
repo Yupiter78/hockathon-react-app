@@ -31,7 +31,7 @@ const About = () => {
                         We are accustomed to this since childhood. No problem.
                     </p>
                     <p>- You’re just in a bad mood today, right?</p>
-                    <p>- I'm NEVER in the mood.</p>
+                    <p>- I`m NEVER in the mood.</p>
                     <div className="gap-2 d-grid d-md-flex justify-content-center">
                         <Link to={"/contacts"}>
                             <Button cls="btn btn-outline-secondary btn-lg px-4">
