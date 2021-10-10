@@ -7,7 +7,7 @@ const Breadcrumbs = () => {
     const breadCrumbsItems = [
         { to: "/", label: "Home" },
         { to: "/favourites", label: "Favourites" },
-        { to: "/contact", label: "Contact" },
+        { to: "/contacts", label: "Contact" },
         { to: "/about", label: "About" },
         { to: "/:memberId", label: "Member" }
     ];
@@ -38,14 +38,14 @@ const Breadcrumbs = () => {
     totalLocation(locationArray, allBreadCrumbs);
 
     return (
-        <div>
+        <div className="container pt-3 pb-0 text-center breadcrumb-style">
             <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
                     {resultData.map(({ to, label }) => (
                         <Link
                             key={to}
                             to={to}
-                            className="breadcrumb-item active"
+                            className="breadcrumb-item"
                             aria-current="page"
                         >
                             {label}

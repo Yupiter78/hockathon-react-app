@@ -1,12 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 import members from "../db/api.members";
-// import Badge from "../components/badge/badge";
-import Button from "../components/button/button";
 import Card from "../components/card/card";
-import MemberCard from "../components/member-card/member-card";
 import Progress from "../components/progress/progress";
 import Slider from "../components/slider/slider";
-import PropTypes from "prop-types";
 
 const Home = ({ onFavorite }) => {
     return (
@@ -73,7 +70,7 @@ const Home = ({ onFavorite }) => {
                             </p>
                             <p className="lead text-muted">
                                 Add a link to our app to your browser bookmarks
-                                and dont forget to send it to your friends, we
+                                and don`t forget to send it to your friends, we
                                 think they will be pleased.
                             </p>
                             <p className="fs-5 w-bold fst-italic text-end">
@@ -83,21 +80,13 @@ const Home = ({ onFavorite }) => {
                     </div>
                 </section>
             </main>
-            <Button
-                type="secondary"
-                text="Add"
-                size={10}
-                disabled={false}
-                icon={"imgUrl"}
-                shape="round"
-            />
-            <MemberCard />
             <Progress />
         </>
     );
 };
+
 Home.propTypes = {
-    onFavorite: PropTypes.func
+    onFavorite: PropTypes.func.isRequired
 };
 
 export default Home;

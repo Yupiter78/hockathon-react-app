@@ -34,7 +34,7 @@ const members = [
             text: "Here's what I did on the project",
             componets: ["Favourites"]
         },
-        badge: { name: "quick eye", color: "danger" }
+        badge: { name: "quick eye", color: "danger", textColor: false }
     },
     {
         _id: "67rdca3eeb7f6fgeed471819",
@@ -64,7 +64,7 @@ const members = [
             text: "Here's what I did on the project",
             componets: ["Navbar"]
         },
-        badge: { name: "sad sorcerer", color: "secondary" }
+        badge: { name: "sad sorcerer", color: "secondary", textColor: false }
     },
     {
         _id: "67rdca3eeb7f6fgeed471820",
@@ -94,7 +94,7 @@ const members = [
             text: "Here's what I did on the project",
             componets: ["Badge", "Button"]
         },
-        badge: { name: "quick eye", color: "danger" }
+        badge: { name: "team soul", color: "warning", textColor: true }
     },
     {
         _id: "67rdca3eeb7f6fgeed471821",
@@ -124,7 +124,7 @@ const members = [
             text: "Here's what I did on the project",
             componets: ["Progress", "About Page"]
         },
-        badge: { name: "agile badger", color: "success" }
+        badge: { name: "agile badger", color: "success", textColor: false }
     },
     {
         _id: "67rdca3eeb7f6fgeed471822",
@@ -154,7 +154,7 @@ const members = [
             text: "Here's what I did on the project",
             componets: ["Slider", "Footer"]
         },
-        badge: { name: "egolege", color: "info" }
+        badge: { name: "egolege", color: "info", textColor: false }
     },
     {
         _id: "67rdca3eeb7f6fgeed471823",
@@ -184,7 +184,7 @@ const members = [
             text: "Here's what I did on the project",
             componets: ["Members Card", "Breadcrumbs"]
         },
-        badge: { name: "moderate pedant", color: "primary" }
+        badge: { name: "moderate pedant", color: "primary", textColor: false }
     }
 ];
 

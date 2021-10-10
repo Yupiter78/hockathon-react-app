@@ -1,12 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Card from "../components/card/card";
 import storage from "../db/storage";
 import members from "../db/api.members";
-import PropTypes from "prop-types";
 
 const Favourites = ({ onFavorite }) => {
-    console.log(storage);
-
     const favourites = members.filter((member) => storage[member._id]);
 
     return (
@@ -38,8 +36,9 @@ const Favourites = ({ onFavorite }) => {
         </main>
     );
 };
+
 Favourites.propTypes = {
-    onFavorite: PropTypes.func
+    onFavorite: PropTypes.func.isRequired
 };
 
 export default Favourites;

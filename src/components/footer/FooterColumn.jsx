@@ -2,17 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { PropTypes } from "prop-types";
 
-const FooterColumn = ({ children, title, list, styles }) => (
-    <div className="col-6 col-md">
-        <h5>{title}</h5>
-        <ul className={`list-unstyled text-small ${styles}`}>
+const FooterColumn = ({ children, title, list, stylesColumn }) => (
+    <div className={stylesColumn.styleContainer}>
+        <h5 className={stylesColumn.styleTitle}>{title}</h5>
+        <ul className={stylesColumn.styleList}>
             {list.map((item) => (
-                <li key={item.title} className="mb-1">
-                    <Link
-                        className="link-secondary text-decoration-none"
-                        to={item.to}
-                    >
+                <li key={item.title} className={stylesColumn.styleItem}>
+                    <Link className={stylesColumn.styleLink} to={item.to}>
                         {item.title}
+                        {children}
                     </Link>
                 </li>
             ))}
@@ -21,10 +19,11 @@ const FooterColumn = ({ children, title, list, styles }) => (
 );
 
 FooterColumn.propTypes = {
-    children: PropTypes.any,
     title: PropTypes.string.isRequired,
     list: PropTypes.array.isRequired,
-    styles: PropTypes.string
+    styles: PropTypes.string,
+    stylesColumn: PropTypes.object.isRequired,
+    children: PropTypes.any
 };
 
 export default FooterColumn;

@@ -12,8 +12,8 @@ const PrimaryButton = styled.button`
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
 `;
 
-const Button = ({ text }) => {
-    return <PrimaryButton>{text}</PrimaryButton>;
+const Button = (props) => {
+    return <PrimaryButton>{props.text}</PrimaryButton>;
 };
 
 Button.propTypes = {

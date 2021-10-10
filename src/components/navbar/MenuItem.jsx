@@ -11,8 +11,8 @@ const MenuItem = ({ children, to }) => {
 };
 
 MenuItem.propTypes = {
-    children: PropTypes.any,
-    to: PropTypes.string.isRequired
+    to: PropTypes.string.isRequired,
+    children: PropTypes.any
 };
 
 export default MenuItem;
